@@ -26,9 +26,9 @@ Right side of the board after the changes:
 Spacebar | FN | ← | ↓ | →
 ```
 
-The FN layer is unchanged: FN+WASD = arrows, FN+Space = color, FN+Left Alt =
-color, FN+Win = lock Win key, etc. — now triggered with the FN key in its new
-position (old Right Alt).
+The FN layer is otherwise unchanged: FN+WASD = arrows, FN+Space = color,
+FN+Left Alt = color, FN+Win = lock Win key, FN+P = Print Screen, etc. — now
+triggered with the FN key in its new position (old Right Alt).
 
 ---
 
@@ -62,13 +62,21 @@ numbers were kept as-is:
 Note: the new FN key (K58) has **no mapping in the `[FN]` section** — required,
 otherwise the board fails to switch to the FN layer.
 
+### 3. FN-layer: added Print Screen on FN+P
+
+Section `[FN]` — new key added (the board has no Print Screen key):
+
+| Key | Mapping |
+|---|---|
+| K25 (P) | `0x02,0x2C,0x00` (Print Screen) |
+
 ---
 
 ## How to apply
 
 1. Backup the current file: copy `C:\Program Files (x86)\Redragon K617-RGB\Cfg.ini` somewhere safe.
 2. Open the software (or `KeyboardDrv.exe`) and press **Restore** (not Apply).
-3. Test: arrow cluster, FN+WASD arrows, FN+Left Alt color.
+3. Test: arrow cluster, FN+WASD arrows, FN+Left Alt color, FN+P Print Screen.
 
 ## Reset
 
